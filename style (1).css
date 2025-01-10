@@ -1,0 +1,142 @@
+*{
+    padding: none;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:20px 30px;
+    border-bottom: 1px solid orangered;
+}
+nav ul{
+    display: flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+li a::before{
+content: '';
+background-color: orangered;
+width: 0;
+height: 2px;
+position: absolute;
+bottom: 0;
+margin-top: 10px ;
+transition:400ms all ease-in-out;
+}
+li a:hover::before{
+    width: 100%;
+}
+section{
+    padding: 4.5rem 0;
+    overflow: hidden;
+}
+.container{
+    width: 97%;
+    margin-inline:auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.colored{
+    color: orangered;
+}
+.header_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 2rem;
+}
+.header_cont .first_slide{
+    width: 90%;
+    display: grid;
+    gap: 1rem;
+}
+.header_cont .first_slide h1{
+    font-size:3rem;
+}
+.header_cont .first_slide h3{
+    font-size: 1.2rem;
+}
+.header_cont .second_slide{
+    width: 60%;
+   
+}
+.header_cont .second_slide img{
+    animation: animae 10s linear infinite 1s;
+        position: relative;
+}
+.header_cont .btn button{
+    border:1px solid orangered;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.header_cont .btn button:hover {
+background-color: orange;
+color: white;
+transition: all 400ms ease-in-out;
+}
+@keyframes animae {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(-360deg)
+    }
+
+}
+.header_cont .second_slide::before {
+    background-color: orangered;
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -1;
+filter: blur(10px);
+}
+
+
+@media (min-width:768px) {
+    .open{
+        display:none;
+    }
+}
+@media (max-width:768px) {
+  nav ul{
+    display: none;
+  }
+  .header_cont{
+    flex-direction: column;
+    width: 98%;
+  }
+  .header_cont .first_slide{
+    width: 100%;
+    padding:0 20px;
+    text-align: center;
+  }
+  .header_cont .first_slide h1{
+    font-size: 3.2rem;
+  }
+  .header_cont .second_slide::before,
+  .header_cont .second_slide::after{
+    display: none;
+  }
+}
+@media (max-width:1024px) {
+
+}

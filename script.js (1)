@@ -1,0 +1,16 @@
+ScrollReveal().reveal('.rollo', {
+    rotate: {
+        x: 20,
+        z: 20
+    },
+    delay: '700' 
+});
+ScrollReveal().reveal('.first_slide', {
+    distance: '50px',
+    origin: 'left',
+    delay: '600'
+})
+ScrollReveal().reveal('.nav', {
+    distance: '50px',
+    origin : 'top'
+})
