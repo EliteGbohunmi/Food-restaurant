@@ -115,6 +115,7 @@ transition: all 400ms ease-in-out;
 .center {
     text-align: center;
     font-size: 2rem;
+    margin:15px 0;
 
 }
 .our .cards{
@@ -141,7 +142,7 @@ transition: all 400ms ease-in-out;
 }
 .abouts h3,
 .chef h3{
-    font-weight: 500;
+    font-weight: 100;
     line-height: 1.4;
 }
 .abouts .firstside{
@@ -226,17 +227,6 @@ transition: all 400ms ease-in-out;
   .our .cards {
       grid-template-columns: 1fr ;
       padding: 30px;
-  }
-  .abouts{
-    grid-template-columns: 1fr;
-    padding: 15px;
-  }
-  .chef{
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-  .clientcards{
-    grid-template-columns: 1fr;
   }
 }
 @media (max-width:1024px) {
